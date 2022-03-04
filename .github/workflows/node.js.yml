@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master,01-create-react-app ]
   pull_request:
-    branches: [ master ]
+    branches: [ master,01-create-react-app ]
 
 jobs:
   build:
@@ -16,7 +16,8 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [10.x, 12.x]
+        # node-version: [12.x, 14.x, 16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
